@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>标记分类</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- 
+		从表现形式上，常见的标记分为三大类：行内标记，块级标记，行内块标记
+		
+		display: inline; 	行内
+		display: block;		块
+		display: inline-block; 行内块
+	 -->
+
+	<!-- 
+		行内标记，	1.宽高不能设置，2.内边距可以被设置,3.可以设置左右两边的外边距,4.在一行上展示
+		span a
+	 -->
+	<h1>行内标记</h1>
+	<span style="background-color: skyblue; width: 100px; height: 100px; padding: 10px; border: 2px dashed #00f; margin:100px;">hello</span>
+	<span style="background-color: red;">world</span>
+
+	<a href="http://www.baidu.com" style="background-color: orange; width: 100px; height: 200px;">百度一下</a>
+
+
+
+	<!-- 
+		块级标记
+		1.宽高可以被设置，2，内边距和外边距都可以被设置，3.自己独占一行
+		div,h1-h6,p
+	 -->
+	<h1>块级标记</h1>
+	<div style="width: 100px; height: 100px; background-color: red; border: 10px solid #000; padding: 20px; margin: 100px;"></div>
+	<span>程序改变世界</span>
+
+
+	<!-- 
+		行内块
+		1.宽高可以被设置，2，内边距和外边距都可以被设置，3.跟行内标记或行内块在一行上展示
+
+		img,input
+	 -->
+	<h1>行内块标记</h1>
+	<img src="https://img30.360buyimg.com/mobilecms/s105x105_jfs/t1/5467/26/3819/183419/5b9a52ccEba27338b/971f6b919f6c8731.jpg!q90" style="width: 300px; padding: 100px; border: 1px dashed #000; margin: 100px;">
+	<img src="https://img12.360buyimg.com/mobilecms/s105x105_jfs/t1/4563/37/3757/198089/5b9a5939Ed0b41235/8176e25f0860e916.jpg!q90">
+	<span>青云</span>
+</body>
+</html>
+
+
+
+

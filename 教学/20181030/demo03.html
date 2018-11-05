@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>优先级规则测试</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+		}
+
+		div{
+			background-color: red;
+		}
+
+		.one>#second div{
+			background-color: orange;
+		}
+
+		div#second.two>.three div#wu{
+			background-color: yellow;
+		}
+
+		#first>.two>div#third>.si#four>#fifth{
+			background-color: green;
+		}
+
+		#second>.three>div.si.wu{
+			background-color: blue;
+		}
+
+		div>div.two>#third.three>.si #wu{
+			background-color: purple;
+		}
+
+		#wu.fifth{
+			background-color: skyblue;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="one" id="first">
+		<div id="second" class="two">
+			<div id="third" class="three">
+				<div class="si" id="four">
+					<div id="wu" class="fifth"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+		上面嵌套标记中，最里面的div的颜色为什么颜色？为什么?（在下面写出分析的具体过程）
+
+				a 		b 		c 		d
+		
+		red		0		0		0		1
+
+		orange	0		1		1		1
+
+		yellow	0		2		2		2
+
+		purple	0		2		3		2
+
+		skyblue	0		1		1		0
+
+		由上面的优先级分析结果看出	purple 起作用
+
+
+
+		#first>.two>div#third>.si#four>#fifth		选择器书写错误		.si#four子标记中没有id为fifth的标记
+		#second>.three>div.si.wu 					选择器书写错误 	.three的子标记中没有 class 为 wu 的标记
+		
+	 -->
+
+</body>
+</html>
