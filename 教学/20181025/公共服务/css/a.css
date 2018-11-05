@@ -1,0 +1,199 @@
+#service-cata-tile{
+	width: 705px;
+	height: 523px;
+	/*背景*/
+	background-color: skyblue;
+}
+
+.box-title{
+	width: 705px;
+	height: 50px;
+	/*下边框*/
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.nav-item{
+	width: 234px;
+	height: 50px;
+	border-left: 1px #e3e3e3 solid;
+	/*背景*/
+	/*background-color: orange;*/
+	float: left;
+
+	/*弹性容器*/
+	display: flex;
+	/*主轴居中*/
+	justify-content: center;
+	/*交叉轴居中*/
+	align-items: center;
+}
+
+.group{
+	width: 702px;
+	height: 58px;
+	/*背景*/
+	background-color: orange;
+	/*顶部外边距*/
+	margin-top: 15px;
+	/*底部外边距*/
+	margin-bottom: 15px;
+	/*左右两边的外边距同时为auto*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.group-item{
+	/*span不能直接设置大小，想要设置大小，需要先设置display:inline-block*/
+	display: inline-block;
+	/*高度*/
+	height: 36px;
+
+	/*左右两边内边距*/
+	padding-left: 15px;
+	padding-right: 15px;
+	/*边框*/
+	border: 1px #e1e1e1 solid;
+	/*左右两边的外边距*/
+	margin-left: 5px;
+	margin-right: 5px;
+
+	/*边框圆角*/
+	border-radius: 20px;
+
+	/*水平居中*/
+	text-align: center;
+	/*垂直居中*/
+	line-height: 36px;
+
+	
+    color: #666;
+    font-size: .75em;
+}
+
+.active{
+	color: #fff;
+	background-color: #afafaf;
+}
+
+.group{
+	/*弹性容器*/
+	display: flex;
+	/*主轴居中*/
+	justify-content: center;
+	/*交叉轴居中*/
+	align-items: center;
+}
+
+
+.content{
+	width: 682px;
+	height: 384px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: pink;
+
+	/*左右两边外边距为auto*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.c-item{
+	width: 68px;
+	height: 88px;
+	/*上面内边距为0，其他的为8*/
+	padding: 0 8px 8px 8px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	float: left;
+}
+
+.icon{
+	width: 52px;
+	height: 42px;
+
+	/*背景*/
+	background-color: #0c92d1;
+
+	/*弹性容器*/
+	display: flex;
+	/*主轴居中*/
+	justify-content: center;
+	/*交叉轴居中*/
+	align-items: center;
+
+
+	/*使用自定义字体*/
+	font-family: icons-moon; 
+	color: #e6f4fb;
+	border-radius: 10px;
+
+	margin: 8px;
+}
+
+.name{
+	font-size: .75em;
+    color: #666;
+    text-align: center;
+}
+
+.content>div{
+	width: 682px;
+	height: 384px;
+}
+
+
+.content>div:nth-of-type(3){
+	background-color: pink;
+}
+
+.bm-item{
+	width: 130px;
+	height: 32px;
+	padding-left: 24px;
+	padding-right: 10px;
+
+	float: left;
+	font-size: .875em;
+	color: #666;
+}
+
+.bm-item::before{
+	width: 24px;
+    height: 24px;
+    content: "\e6ab";
+    font-size: 24px;
+    font-family: icons-moon;
+    color: #00B341;
+    position: relative;
+    top: 5px;
+}
+
+.content>div{
+	display: none;
+}
+.content>div.show{
+	display: block;
+}
+
+.bs{
+	display: none;
+}
+
+.visibility{
+	display: block;
+}
+
+.red{
+	background-color: red;
+}
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>选择器优先级</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+		}
+
+		div{
+			background-color: pink;
+		}
+		div.c4#d4{
+			background-color: orange;
+		}
+		#d1>.c2>.c3>.c4{
+			background-color: yellow;
+		}
+		div.c1>div.c2 .c4#d4{
+			background-color: green;
+		}
+		
+		/*选择器错误，不参与优先级比较*/
+		#d1>#d3>#d2>#d4{
+			background-color: blue;
+		}
+
+		div.c1>#d2 #d4{
+			background-color: red;
+		}
+
+		#d1 #d3.c3 div{
+			background-color: purple;
+		}
+
+		p::before{
+			content: "青云";
+		}
+
+		p::after{
+			content: "程序改变世界"
+		}
+	</style>
+</head>
+<body>
+	<div class="c1" id="d1">
+		<div class="c2" id="d2">
+			<div class="c3" id="d3">
+				<div id="d4" class="c4" style="background-color: #000;"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+		选择器的优先级规则：
+			优先级是由 a b c d 四位数组成，在比较的过程中，依次比较 a b c d 四位数，大者胜出，优先级高，如果比较的结果是优先级相同，那么采用就近原则（后写起作用），注意 a b c d 四位数没有进制。
+
+			确定每一位上的数字的规则
+				a: 样式如果是行内样式，那么 a 为记 1
+				b: 样式对应的选择器的 id 的个数
+				c: 样式对应的选择器中 类名 和 伪类 的个数之和
+				d: 样式对应的选择器中 标签名称 和 伪元素 的个数之和
+
+	
+				a  		b 		c 		d
+
+		pink 	0		0		0		1
+
+		orange	0		1		1		1
+
+		yellow 	0		1		3		0
+
+		green	0		1		3		2
+
+		red		0		2		1		1
+
+		purple	0		2		1		1
+
+		#000	1		0		0		0
+		
+			
+			另外，需要注意，样式添加 !important 之后，优先级最高
+
+	 -->
+
+	 <p>
+	 	world
+	 </p>
+
+</body>
+</html>

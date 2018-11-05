@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>怪异盒模型</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.out{
+			width: 400px;
+			height: 400px;
+
+			background-color: pink;
+
+			padding: 20px;
+			border: 1px solid #000;
+			margin: 10px;
+
+			/*
+				盒子大小
+				box-sizing:content-box/border-box;
+				content-box: 设置的大小（宽和高）为内容的大小;
+				border-box: 设置大小（宽和高）为 内容的大小 + 内边距的大小 + 边框的大小;
+			*/
+			/*box-sizing: content-box;*/
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div class="out"></div>
+</body>
+</html>

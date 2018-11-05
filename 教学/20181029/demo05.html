@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>浮动</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.out{
+			width: 1200px;
+			height: 500px;
+			border: 1px dashed #000;
+		}
+
+		.out>div{
+			width: 200px;
+			height: 200px;
+			border: 1px dotted #00f;
+
+			/*浮动可以让 标记在一行上展示*/
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="out">
+		<div>A</div>
+		<div>B</div>
+		<div>C</div>
+		<div>D</div>
+	</div>
+</body>
+</html>

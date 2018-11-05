@@ -1,0 +1,165 @@
+/*通过类名寻找标记*/
+.out{
+	/*宽高*/
+	width: 230px;
+	height: 305px;
+
+	/*
+		border: 1px solid #000000;
+		边框: 1像素粗细 实线 黑色;
+	*/
+	border: 1px solid #000000;
+}
+
+.p1{
+	/*字体大小*/
+	font-size: 14px;
+	/*行高 一行文字的高度*/
+	line-height: 18px;
+	/*高度*/
+	height: 36px;
+	/*背景颜色*/
+	/*background-color: #333333;*/
+	/*溢出部分隐藏*/
+	overflow: hidden;
+	/*宽度*/
+	width: 198px;
+}
+
+.p2{
+	/*字体大小*/
+	font-size: 14px;
+	/*字体颜色*/
+	color: #e33333;
+}
+
+/*
+	把 img 和 p1 p2 看做一个整体，让这个整体在 out 中居中(水平和垂直)，要使用弹性容器
+
+	弹性容器是由两个轴组成，一个为主轴（默认为 row ,水平方向）,另一个为交叉轴（默认为 column ，垂直方向），主轴方向可以决定内容的排列方向。使用步骤
+	1.设置弹性容器				display:flex;
+	2.设置主轴方向				flex-direction:row/column;
+	3.设置主轴方向排列方式		justify-content:center;
+	4.设置交叉轴方向排列方式	align-items:center;
+*/
+.out{
+	/*弹性容器*/
+	display: flex;
+	/*主轴方向*/
+	flex-direction: column;
+	/*主轴居中*/
+	justify-content: center;
+	/*交叉轴居中
+	*/
+	align-items: center;
+}
+
+p{
+	/*
+		设置外边距
+		外边距设置的规则，从顶部开始，顺时针设置
+		顶部:16px; 其他:0;
+	*/
+	margin: 16px 0 0 0;
+}
+
+/*当鼠标悬浮在 out 上的时候，更改 p1 的字体颜色为 #e33333*/
+.p1{
+	/*让 p1 拥有过渡效果，过渡持续的时间为 1s */
+	transition: all 1s;
+}
+.out:hover>.p1{
+	color: #e33333;
+}
+/*当鼠标悬浮在 out 上的时候，更改 img 的不透明度*/
+img{
+	transition: all 1s;
+}
+.out:hover>img{
+	/*
+		opacity:不透明度;
+
+		0:透明; 1:不透明;
+	*/
+	opacity: 0.8;
+}
+
+
+.in{
+	width: 230px;
+	height: 100px;
+	background-color: rgba(255,255,0,0.8);
+}
+
+.out{
+	/*相对定位*/
+	position: relative;
+}
+.in{
+	/*绝对定位*/
+	position: absolute;
+	bottom: 0;
+}
+
+.zxs{
+	/*宽高*/
+	width: 60px;
+	height: 60px;
+	/*背景颜色*/
+	background-color: rgba(0,0,0,0.6);
+
+	/*字体颜色*/
+	color: #ffffff;
+	/*
+		字体粗细
+		取值为整百数 	100,200,300,400,...,900
+	*/
+	font-weight:100;
+	/*字体大小，最小值为12px*/
+	font-size: 12px;
+
+	/*内容居中*/
+	/*弹性容器*/
+	display: flex;
+	/*主轴居中*/
+	justify-content: center;
+	/*交叉轴居中*/
+	align-items: center;
+
+	/*圆角*/
+	border-radius: 50%;
+}
+
+.in{
+	/*弹性容器*/
+	display: flex;
+	/*主轴居中*/
+	justify-content: center;
+	/*交叉轴居中*/
+	align-items: center;
+
+	/*默认透明*/
+	opacity: 0;
+
+	transition: all 0.3s;
+}
+/*当鼠标悬浮在 out 上的时候，更改 in 的不透明度*/
+.out:hover>.in{
+	opacity: 1;
+}
+
+/*当鼠标悬浮在 out 上的时候，慢慢放大 zxs*/
+.zxs{
+	/*缩小0倍*/
+	transform: scale(0);
+	transition: all 1s;
+}
+.out:hover .zxs{
+	transform: scale(1);
+}
+
+/*
+	选择器:hover				当鼠标悬浮在 选择器对应的 标记上的时候
+	父>子					通过父标记找到子标记，对子标记设置样式
+	祖先 后代					通过祖先标记寻找后代标记，对后代标记设置样式
+*/

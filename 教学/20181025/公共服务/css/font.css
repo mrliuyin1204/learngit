@@ -1,0 +1,17 @@
+@font-face {
+	/*自定义字体名称*/
+	font-family: 'icons-moon';
+	/*自定义字体库的地址*/
+	src:url('icomoon.woff');
+	/*粗体设置*/
+	font-weight: normal;
+	/*斜体设置*/
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'public_service';
+	src:url('public-service.woff');
+	font-weight: normal;
+	font-style: normal;
+}

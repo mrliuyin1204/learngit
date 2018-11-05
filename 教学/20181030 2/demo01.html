@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css样式</title>
+	<meta charset="utf-8">
+	<!-- 内部样式 -->
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+
+			background-color: orange;
+		}
+
+		div.c1#d1{
+			background-color: skyblue;
+		}
+	</style>
+	<!-- 外部css样式 -->
+	<link rel="stylesheet" type="text/css" href="out.css">
+</head>
+<body>
+	<!-- 行内样式 -->
+	<div style="background-color: pink;" class="c1" id="d1">hello</div>
+
+	<script type="text/javascript">
+		// 在 js 中设置的样式，是行内样式
+		var div = document.querySelector("div");
+		div.style.color = "blue";
+	</script>
+</body>
+</html>
